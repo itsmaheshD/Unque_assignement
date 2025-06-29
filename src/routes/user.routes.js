@@ -1,8 +1,9 @@
-const express = require('express');
+import express from 'express';
+import { login } from '../controllers/login.controller(authcontroller).js';
+import { register } from '../controllers/user.controllers.js';
 const router = express.Router();
-const userController = require('../controllers/user.Controller');
 
+router.post('/login', login);
+router.post('/register', register);
 
-router.get('/qpi/admin/login', userController.getusers);
-
-module.exports = router;
+export default router;
