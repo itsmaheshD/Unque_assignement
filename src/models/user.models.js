@@ -8,3 +8,4 @@ const userSchema = new mongoose.Schema({
 });
 
 export default mongoose.model('User_type', userSchema);
+//console.log(userSchema.obj);

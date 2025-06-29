@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 
 const appointmentSchema = new mongoose.Schema({
-  student: { type: mongoose.Schema.Types.ObjectId, ref: 'User_type', required: true },
-  professor: { type: mongoose.Schema.Types.ObjectId, ref: 'User_type', required: true },
-  availability: { type: mongoose.Schema.Types.ObjectId, ref: 'Availability', required: true },
+  studentId: { type: mongoose.Schema.Types.ObjectId, ref: 'User_type', required: true },
+  professorId: { type: mongoose.Schema.Types.ObjectId, ref: 'User_type', required: true },
+  slot: { type: mongoose.Schema.Types.ObjectId, ref: 'Availability', required: true },
   status: { type: String, enum: ['booked', 'cancelled'], default: 'booked' }
 });
 

@@ -1,4 +1,4 @@
-import Slot_register from '../models/Availability.js';
+import Slot_register from '../models/register_slot.models.js';
 
 export const addSlot = async (req, res) => {
   const { professorId, date, startTime, endTime } = req.body;
