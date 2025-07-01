@@ -1,0 +1,8 @@
+Endpoints for apis
+
+1.Login - ( api/auth/login)
+2.Register - ( api/auth/register)
+3.Register slot - (api/availabilty)
+4.Checking slot of professor - (api/availabilty/:professorid)
+5.Book slot - (api/appointment)
+6.Cancel appointment - (api/appointment/cancel/:appointmentid/:professorid)
