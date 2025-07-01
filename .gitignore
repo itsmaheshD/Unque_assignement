@@ -1,3 +1,4 @@
-
-node_modules/.env
 node_modules/
+#ignoring the .env file and node modules
+#to push on the github repository
+.env

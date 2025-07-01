@@ -5,10 +5,8 @@ import mongoose from 'mongoose';
 console.log('MONGO_URI:', process.env.MONGO_URI);
 
 export const connectDB = async () => {
-  if(!process.env.MONGODB_URL){
-    throw new Error('MONFO ERROR');
-  }
-  await mongoose.connect(process.env.MONGODB_URL, {
+ 
+  await mongoose.connect("mongodb://localhost:27017/Unque", {
     useNewUrlParser: true,
     useUnifiedTopology: true
   });
