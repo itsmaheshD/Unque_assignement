@@ -4,15 +4,16 @@ import Slot_register from '../models/register_slot.models.js';
 //controller to book professor appointment
 export const bookAppointment=async (req,res)=>{
     try{
-        const {studentId,professorId,slotId}=req.body;
+        const {studentname,professorname,slotId}=req.body;
         const slot=await Slot_register.findById(slotId);
         if(!slot||slot.isbook){
             res.status(400).json({message:"Slot is booked"});
         }
+        //logic to mark slot as booked in database
         slot.isbook=true;
         slot.save();
         const book_appointment=new Appointment_slot({
-           studentId,professorId,slot:slotId
+           studentname,professorname,slot:slotId
         });
         book_appointment.save();
         res.status(201).json({message:"Appontment is booked successfullt"});
