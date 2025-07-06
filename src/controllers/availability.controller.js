@@ -4,7 +4,7 @@ export const addSlot = async (req, res) => {
   const { professorId, date, startTime, endTime } = req.body;
   const slot = new Slot_register({ professor: professorId, date, startTime, endTime });
   await slot.save();
-  res.json({ message: 'Slot added', slot });
+  return res.json({ message: 'Slot added', slot });
 };
 
 //function to Check the slots available for a prfessor
@@ -15,7 +15,7 @@ export const retriveSlots = async (req, res) => {
   if (slot.length === 0) {
     return res.json({ message: "No slots" });
   }
-  res.json({ slot });
+ return  res.json({ slot });
 };
 
 
